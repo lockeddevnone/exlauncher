@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Telegram Mini Apps Vanilla JS Sample App</title>
+    <title>PITGAME</title>
     <style>
         body {
             --bg-color: var(--tg-theme-bg-color);
@@ -67,26 +67,19 @@
         <div align="center">
             <a href="https://ton.org/"><img width="48" src="./assets/tapps.png" alt="logo of telegram web apps"></a>
         </div>
-        <h1>Modals</h1>
-        <button onclick="Telegram.WebApp.showAlert('Hello World!');">Launch Alert</button>
-        <button onclick="showPopup();">Launch Popup</button>
 
-        <h1>Links</h1>
+        <h1>Vui lòng chọn cách thức truy cập</h1>
         <ul>
             <li>
-                <a href="javascript:Telegram.WebApp.openTelegramLink('https://t.me/trendingapps');">Open link within Telegram</a>
+                <a href="javascript:Telegram.WebApp.openTelegramLink('https://gateway.pitgame2.games/playGame');">Chơi game trên Mini App</a>
             </li>
             <li>
-                <a href="javascript:Telegram.WebApp.openLink('https://ton.org/');">Open link in external browser</a>
+                <a href="javascript:Telegram.WebApp.openLink('https://gateway.pitgame2.games/playGame/');">Chơi game trên trình duyệt</a>
             </li>
             <li>
-                <a href="javascript:Telegram.WebApp.openLink('https://telegra.ph/api',{try_instant_view:true});">Open link inside Telegram webview</a>
+                <a href="javascript:Telegram.WebApp.openLink('https://gateway.pitgame2.games/playGame',{try_instant_view:true});">Chơi game trên Telegram</a>
             </li>
         </ul>
-
-        <h1>Buttons</h1>
-        <button onclick="Telegram.WebApp.expand();">Expand Webview</button>
-        <button onclick="toggleMainButton();">Toggle Main Button</button>
     </main>
     <div id="viewport"></div>
     <div id="viewport-params-size"></div>
@@ -103,10 +96,10 @@
 
         // Show main button
         Telegram.WebApp.MainButton.setParams({
-            text: 'Main Button'
+            text: 'Chơi game'
         });
         Telegram.WebApp.MainButton.onClick(function () {
-            Telegram.WebApp.showAlert('Main Button was clicked')
+            Telegram.WebApp.openLink('https://gateway.pitgame2.games/playGame');
         });	
         Telegram.WebApp.MainButton.show();
 
